@@ -1,0 +1,43 @@
+@import '../../style/index.scss';
+.B_menu {
+  position: fixed;
+  left: 0;
+  top: 100px;
+  width: 200px;
+  height: changeHeightTopx(100)-200px;
+  background-color: $menuBgc;
+  padding: 10px 0 0 10px;
+  font-size: 16px;
+  .B_menu_list_p {
+    color: #f6f6f6;
+  }
+  .B_menu_li {
+    padding-bottom: 10px;
+  }
+  .B_menu_detail_li {
+    position: relative;
+    color: #e0d4d4;
+    padding: 5px 0 5px 5px;
+    .B_menu_detail_icon {
+      height: 18px;
+      width: 18px;
+    }
+    span {
+      font-size: 14px;
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+  .B_menu_active {
+    background-color: rgb(131, 131, 131);
+  }
+  .B_menu_active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: red;
+  }
+}

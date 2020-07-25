@@ -1,0 +1,27 @@
+.B_song_tags {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 16px;
+  .B_tags_title {
+    font-weight: bold;
+    color: #000;
+  }
+  .B_tags_lists {
+    margin-left: 10px;
+    display: inline-block;
+    .B_tags_list {
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 20px;
+      color: #0c0c0c;
+    }
+    .B_tag_active {
+      color: rgb(219, 19, 19);
+    }
+  }
+}
+.B_song_list {
+  margin: 10px auto 0;
+  width: 1200px;
+}

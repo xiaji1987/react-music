@@ -1,0 +1,39 @@
+.B_header_tab {
+  position: fixed;
+  left: 200px;
+  top: 100px;
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 900;
+  background-color: #fff;
+  .B_tab_ul {
+    margin: 0 auto;
+    width: 900px;
+    display: flex;
+    .B_tab_link {
+      display: inline-block;
+      flex: 1;
+    }
+    .B_tab_li {
+      font-size: 16px;
+      color: #0a0a0a;
+      text-align: center;
+      line-height: 50px;
+      position: relative;
+    }
+    .B_tab_click::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 5px;
+      background-color: red;
+    }
+  }
+}
+
+.B_music_page {
+  padding: 50px 0 100px;
+}

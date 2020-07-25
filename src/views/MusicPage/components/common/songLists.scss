@@ -1,0 +1,33 @@
+.B_song_ul {
+  display: flex;
+  flex-wrap: wrap;
+  .B_song_li {
+    position: relative;
+    cursor: pointer;
+    width: 190px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    .B_song_count {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 20px;
+      font-size: 14px;
+      text-align: right;
+      color: #fff;
+      padding: 0 5px;
+      height: 25px;
+      line-height: 25px;
+      box-sizing: border-box;
+      width: 185px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0) , rgba(0, 0, 0, 0.7));
+    }
+    img {
+      width: 100%;
+    }
+    .B_song_info {
+      margin-bottom: 5px;
+      color: #000;
+    }
+  }
+}

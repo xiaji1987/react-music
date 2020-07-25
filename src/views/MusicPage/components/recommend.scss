@@ -1,0 +1,110 @@
+.B_recom_swipers {
+  box-sizing: border-box;
+  width: 675px;
+  height: 200px;
+  margin: 10px auto 0;
+  .B_recom_swiper {
+    img {
+      height: 200px;
+      width: 700px;
+    }
+  }
+}
+.B_recom_songsheet {
+  width: 1200px;
+  margin: 10px auto 0;
+  .B_recom_song_title {
+    margin: 0 0 0 5px;
+    font-size: 16px;
+    color: #0e0e0e;
+  }
+}
+
+.B_recom_sole {
+  width: 1200px;
+  margin: 10px auto 0;
+  .B_recom_sole_title {
+    margin: 0 0 0 5px;
+    font-size: 16px;
+    color: #0e0e0e;
+  }
+  .B_recom_sole_lists {
+    padding-top: 10px;
+    .B_recom_sole_list {
+      display: inline-block;
+      padding: 0 10px;
+      img {
+        width: 360px;
+      }
+      .B_recom_sole_info {
+        color: #000000;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.B_new_music {
+  width: 1200px;
+  margin: 10px auto 0;
+  .B_recom_sole_title {
+    margin: 0 0 0 5px;
+    font-size: 20px;
+    color: #0e0e0e;
+    font-weight: bold;
+    border-bottom: 1px solid #5c5c5c;
+  }
+  .B_new_active {
+    background-color: #cecece;
+  }
+  .B_new_list {
+    cursor: pointer;
+    display: inline-block;
+    width: 50%;
+    padding: 10px 10px 10px 30px;
+    height: 80px;
+    position: relative;
+    .B_new_list_icon {
+      position: absolute;
+      left: 65px;
+      top: 10px;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 80px;
+      .anticon {
+        width: 50%;
+        height: 50%;
+        svg {
+          width: 30px !important;
+          height: 30px;
+        }
+      }
+    }
+    .B_new_list_num {
+      text-align: center;
+      width: 25px;
+      font-size: 16px;
+      display: inline-block;
+      line-height: 50px;
+      margin-right: 10px;
+    }
+    img {
+      vertical-align: top;
+      width: 60px;
+      height: 60px;
+    }
+    .B_new_list_info {
+      vertical-align: top;
+      display: inline-block;
+      p {
+        margin: 0 0 0 10px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .B_new_list_p {
+        margin-top: 10px;
+      }
+    }
+  }
+}

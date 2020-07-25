@@ -1,0 +1,1 @@
+export const HEADER_SEARCH_INFO = 'HEADER_SEARCH_INFO'

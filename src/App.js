@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import 'antd/dist/antd.css'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
+import { MusicPage, NoPage, SongDetail } from './views/index' 
+import { Header, Footer, Menu } from './components/index'
+import { Provider} from 'react-redux'
+import store from './store/index'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Header />
+        <Menu />
+        <div className="B_show_page">
+          <Switch>
+            <Route path='/music' component={MusicPage} />
+            <Route path='/song/detail/:id' component={SongDetail} />
+            <Redirect to='/music' from='/' exact />
+            <Route to='/404' component={NoPage} />
+          </Switch>
+        </div>
+        <Footer />
+      </BrowserRouter>
+    </Provider>
   );
 }
 

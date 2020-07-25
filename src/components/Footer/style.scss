@@ -1,0 +1,9 @@
+@import '../../style/index.scss';
+.B_footer {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: $footerBgc;
+}
