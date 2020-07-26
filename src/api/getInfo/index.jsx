@@ -47,3 +47,11 @@ export function getSongSheets(data) {
     params: data
   })
 }
+
+// 获取歌单详情
+export function getSongDetails(data) {
+  return http({
+    url: '/playlist/detail',
+    params: data
+  })
+}

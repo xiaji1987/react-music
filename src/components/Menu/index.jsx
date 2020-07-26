@@ -71,9 +71,9 @@ class index extends Component {
     })
   }
   render() {
-    // console.log(this.state.clickIndex)
+    let winHeight = document.body.clientHeight
     return (
-      <div className='B_menu'>
+      <div className='B_menu' style={{height: (winHeight - 110) + 'px'}}>
         <ul className='B_menu_ul'>
           {
             menuLists.map((list, listIndex) => {

@@ -9,7 +9,7 @@ function songList(props) {
       {
         props.songLists.map((item, index) => {
           return (
-            <Link to={'/song/detail/' + item.id} key={index + 'songs'}>
+            <Link to={{ pathname: '/song/detail', query: { id: item.id } }} key={index + 'songs'}>
               <li className="B_song_li">
                 <div className="B_song_count">
                   <IconFont type="icon-ziyuanldpi" />
