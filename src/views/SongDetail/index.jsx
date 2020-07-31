@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getInfo } from '../../api/index'
+import './style.scss'
 
 class index extends Component {
   state = {
