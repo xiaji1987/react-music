@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
 import { getInfo } from '../../api/index'
 import './style.scss'
+import { IconFont } from '../../createLabel';
 
 class index extends Component {
   state = {
     songDetails: []
   }
-  componentDidMount() {
-    // let id = this.props.location.query.id || null
-    getInfo.getSongDetails({ id: '5136777338' }).then(res => {
+  componentDidMount () {
+    let id = this.props.location.query ? this.props.location.query.id : sessionStorage.getItem('detailId')
+    sessionStorage.setItem('detailId', id)
+    this.getDetailInfo(id)
+  }
+  getDetailInfo = (id) => {
+    getInfo.getSongDetails({ id: id }).then(res => {
       console.log(res)
       this.setState({
         songDetails: res.data.playlist
       })
     })
+  }
+  componentWillUnmount () {
+    sessionStorage.removeItem('detailId')
   }
   render() {
     let { songDetails } = this.state
@@ -25,20 +33,25 @@ class index extends Component {
           </div>
           <div className="B_song_right_info">
             <div className="B_song_right_title">
-              <span className="B_song_name">{songDetails.name}</span>
-              <span className="B_song_count"></span>
+              <div className="B_song_name_info">
+                <span className="B_song_name_tag">歌单</span>
+                <span className="B_song_name">{songDetails.name}</span>
+              </div>
+              <div className="B_song_count">
+                <span className="B_song_count"></span>
+              </div>
             </div>
             <div className="B_song_right_play">
               <div className="B_song_play_btn">
-                <i></i>
+                <IconFont type="icon-bofang1" />
                 播放全部
               </div>
               <div className="B_song_collect_count">
-                <i></i>
+                <IconFont type="icon-fuzhi" />
                 收藏({songDetails.subscribedCount})
               </div>
               <div className="B_song_share_count">
-                <i></i>
+                <IconFont type="icon-share" />
                 分享({songDetails.shareCount})
               </div>
             </div>

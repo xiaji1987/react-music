@@ -6,6 +6,7 @@ import { SearchOutlined } from '@ant-design/icons'
 import { connect } from 'react-redux'
 import { actionCreators } from './store/index'
 import SearchList from './components/SearchList'
+import { IconFont } from '../../createLabel/index'
 // function debounce(fn, ms = 500) {
 //   let timeoutId = null
 //   return function () {
@@ -39,6 +40,9 @@ class index extends Component {
       this.props.searchInfo(params)
     })
   }
+  handleClickBack = () => {
+    window.history.back(-1)
+  }
   render() {
     // const { songsList } = this.props
     const { inputSetValue } = this.state
@@ -47,6 +51,11 @@ class index extends Component {
         <div className="B_header_left">
           <img src={logo} alt="logo图片"/>
           <span>筱竹</span>
+        </div>
+        <div className="B_header_back">
+          <div className="B_header_back_off" onClick={this.handleClickBack} >
+            <IconFont type='icon-houtui' />
+          </div>
         </div>
         <div className="B_header_input">
           <Input placeholder="搜索歌曲" value={inputSetValue} suffix={<SearchOutlined />} onChange={this.handleInputChange}/>

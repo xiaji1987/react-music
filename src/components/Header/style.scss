@@ -20,6 +20,16 @@
       color: #fff;
     }
   }
+  .B_header_back {
+    position: absolute;
+    left: 250px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .B_header_back_off {
+      cursor: pointer;
+      font-size: 30px;
+    }
+  }
   .B_header_input {
     position: absolute;
     left: 40%;

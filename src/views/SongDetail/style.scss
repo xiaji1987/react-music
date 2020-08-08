@@ -1,17 +1,40 @@
 .B_song_detail {
   .B_song_title {
-    height: 250px;
+    padding: 25px;
+    box-sizing: border-box;
     div {
       display: inline-block;
     }
     .B_song_left_img {
-      width: 250px;
-      padding: 25px;
-      box-sizing: border-box;
+      width: 200px;
+      vertical-align: top;
       img {
         width: 100%;
         height: 100%;
       }
+    }
+    .B_song_right_info {
+      padding-left: 50px;
+      width: 1300px;
+      cursor: default;
+      .B_song_right_title {
+        .B_song_name_info {
+          .B_song_name_tag {
+            display: inline-block;
+            padding: 3px 5px;
+            color: rgb(218, 55, 55);
+            border: 1px solid rgb(218, 55, 55);
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 15px;
+          }
+          .B_song_name {
+            font-size: 25px;
+          }
+        }
+      }
+      .B_song_right_play {}
     }
   }
 }
